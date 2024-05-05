@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "discord-dicebot"
+version = "0.1.0"
+description = ""
+authors = ["tksnnx <tkser.edu@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+discord-py = "^2.3.2"
+dice = "^4.0.0"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
