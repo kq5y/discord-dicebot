@@ -21,7 +21,8 @@ poetry run python app/main.py
 or
 
 ```bash
-docker build .
+docker build . - discord-dicebot
+docker run -d discord-dicebot
 ```
 
 ## LICENSE
