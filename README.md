@@ -21,7 +21,7 @@ poetry run python app/main.py
 or
 
 ```bash
-docker build . - discord-dicebot
+docker build . -t discord-dicebot
 docker run -d discord-dicebot
 ```
 
