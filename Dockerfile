@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.12-bullseye
 WORKDIR /app
 
 ENV POETRY_HOME=/opt/poetry
