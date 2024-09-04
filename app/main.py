@@ -6,6 +6,8 @@ from discord import app_commands
 import discord
 from dice import roll, DiceBaseException
 
+from server import keep_alive
+
 load_dotenv(verbose=True)
 
 dotenv_path = join(dirname(__file__), ".env")
@@ -29,5 +31,7 @@ async def dice(interaction: discord.Interaction, string: str, private: bool = Fa
         await interaction.response.send_message(f"Result: {result}", ephemeral=private)
     except DiceBaseException as e:
         await interaction.response.send_message(str(e), ephemeral=private)
+
+keep_alive()
 
 client.run(os.getenv("DISCORD_TOKEN"))
