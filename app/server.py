@@ -1,15 +1,14 @@
-import uvicorn
-from fastapi import FastAPI
+from flask import Flask
 from threading import Thread
 
-app = FastAPI()
+app = Flask("")
 
-@app.get("/")
+@app.route("/")
 def main():
-    return {"message": "dicebot is running!"}
+    return "dicebot is running!"
 
 def run():
-    uvicorn.run(app)
+    app.run("0.0.0.0", port=8080)
 
 def keep_alive():
     server = Thread(target=run)

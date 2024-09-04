@@ -12,6 +12,6 @@ RUN poetry install
 
 COPY . .
 
-EXPOSE 8000
+EXPOSE 8080
 
 CMD ["poetry", "run", "python", "-u", "./app/main.py"]
