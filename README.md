@@ -11,6 +11,7 @@
     - Read Message History
 1. Invite the bot to the server using the generated URL.
 1. Write `DISCORD_TOKEN` in the `.env` file.
+    If you want to run a server, write `ENABLE_SERVER=true` in the file.
 1. Execute the command below.
 
 ```bash
