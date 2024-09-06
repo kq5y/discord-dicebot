@@ -65,7 +65,9 @@ async def bchelp(interaction: discord.Interaction):
         result_json = result.json()
         if result.status_code != 200 or (not result_json["ok"]):
             raise Exception(result_json["reason"])
-        await interaction.response.send_message(result_json["help_message"], ephemeral=True)
+        help_message = result_json["help_message"]
+        help_message = help_message.replace("*", "\*").replace("_", "\_").replace("~", "\~")
+        await interaction.response.send_message(help_message, ephemeral=True)
     except Exception as e:
         await interaction.response.send_message(str(e), ephemeral=True)
         logger.error("Error getting help", exc_info=e)
